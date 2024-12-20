@@ -1,0 +1,71 @@
+@import 'foundation/_setting';
+
+@font-face {
+  font-family: Yu Gothic;
+  font-weight: 700;
+  src: url('../font/yu-gothic-bold.ttf');
+  src: url('../font/yu-gothic-bold.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: Yu Gothic;
+  font-weight: 400;
+  src: url('../font/yu-gothic-regular.ttf');
+  src: url('../font/yu-gothic-regular.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: Yu Gothic;
+  font-weight: 300;
+  src: url('../font/yu-gothic-light.ttf');
+  src: url('../font/yu-gothic-light.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: Yu Gothic;
+  font-weight: 500;
+  src: url('../font/yu-gothic-medium.otf');
+  src: url('../font/yu-gothic-medium.otf') format("truetype")
+}
+
+@font-face {
+  font-family: Larken;
+  font-weight: bold;
+  src: url('../font/LarkenDEMO-Bold.otf');
+  src: url('../font/LarkenDEMO-Bold.otf') format("truetype")
+}
+
+@font-face {
+  font-family: Helix;
+  font-weight: bold;
+  src: url('../font/Hellix-Bold.ttf');
+  src: url('../font/Hellix-Bold.ttf') format("truetype")
+}
+
+@font-face {
+  font-family: Helix;
+  font-weight: 500;
+  src: url('../font/Hellix-Medium.ttf');
+  src: url('../font/Hellix-Medium.ttf') format("truetype")
+}
+
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  max-width: 100%;
+  position: relative;
+  @media screen and (max-width: 1300px) {
+    padding: 0 20px;
+  }
+  &--small {
+    width: 960px;
+  }
+}
+
+main {
+  margin-top: 90px;
+  overflow: hidden;
+  @include sp {
+    margin-top: 65px;
+  }
+}

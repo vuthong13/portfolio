@@ -1,0 +1,7 @@
+.caption {
+    font-family: $font-01;
+    font-size: 12px;
+    @include sp {
+        font-size: 10px;
+    }
+}

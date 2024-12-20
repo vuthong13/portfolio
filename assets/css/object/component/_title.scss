@@ -1,0 +1,53 @@
+.h2 {
+    font-family: $font-01;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 80px;
+    @include sp {
+        font-size: 22px;
+        margin-bottom: 55px;
+        line-height: 1.45;
+    }
+}
+
+.sec-ttl {
+    text-align: center;
+    position: relative;
+    font-family: $font-01;
+    font-size: 54px;
+    font-weight: 400;
+    padding-bottom: 32px;
+    margin-top: 56px;
+    margin-bottom: 25px;
+    @include sp {
+        font-size: 33px;
+        padding-bottom: 22px;
+        margin-bottom: 18px;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 90px;
+        height: 3px;
+        bottom: 0;
+        left: calc(50% - 45px);
+        background-color: $color-dark;
+        @include sp {
+            width: 50px;
+            height: 2px;
+            left: calc(50% - 25px);
+        }
+    }
+    span {
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        margin-top: 12px;
+        @include sp {
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    }
+}

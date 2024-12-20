@@ -1,0 +1,223 @@
+:root, * {
+    cursor: none;
+}
+
+.c-mouse-stalker__cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    filter: blur(1px);
+    border-radius: 0;
+    opacity: 0.5;
+    transform-origin: center center;
+    span {
+        position: fixed;
+        display: block;
+        border-radius: 50%;
+        transform-origin: center center;
+        filter: blur(2.4px);
+        width: 14px;
+        height: 14px;
+        &:nth-child(1) {
+            background-color: rgb(60, 180, 229);
+        }
+        &:nth-child(2) {
+            background-color: rgb(65, 181, 224);
+            transform: scale(0.992, 0.992);
+        }
+        &:nth-child(3) {
+            background-color: rgb(71, 182, 216);
+            transform: scale(0.984, 0.984);
+        }
+        &:nth-child(4) {
+            background-color: rgb(73, 183, 214);
+            transform: scale(0.976, 0.976);
+        }
+        &:nth-child(5) {
+            background-color: rgb(76, 183, 210);
+            transform: scale(0.968, 0.968);
+        }
+        &:nth-child(6) {
+            background-color: rgb(78, 184, 207);
+            transform: scale(0.96, 0.96);
+        }
+        &:nth-child(7) {
+            background-color: rgb(79, 184, 207);
+            transform: scale(0.952, 0.952);
+        }
+        &:nth-child(8) {
+            background-color: rgb(83, 185, 202);
+            transform: scale(0.944, 0.944);
+        }
+        &:nth-child(9) {
+            background-color: rgb(88, 186, 197);
+            transform: scale(0.936, 0.936);
+        }
+        &:nth-child(10) {
+            background-color: rgb(91, 186, 193);
+            transform: scale(0.928, 0.928);
+        }
+        &:nth-child(11) {
+            background-color: rgb(91, 187, 192);
+            transform: scale(0.92, 0.92);
+        }
+        &:nth-child(12) {
+            background-color: rgb(92, 187, 191);
+            transform: scale(0.912, 0.912);
+        }
+        &:nth-child(13) {
+            background-color: rgb(97, 188, 185);
+            transform: scale(0.904, 0.904);
+        }
+        &:nth-child(14) {
+            background-color: rgb(100, 188, 182);
+            transform: scale(0.896, 0.896);
+        }
+        &:nth-child(15) {
+            background-color: rgb(102, 189, 180);
+            transform: scale(0.888, 0.888);
+        }
+        &:nth-child(16) {
+            background-color: rgb(114, 191, 166);
+            transform: scale(0.88, 0.88);
+        }
+        &:nth-child(17) {
+            background-color: rgb(117, 192, 163);
+            transform: scale(0.872, 0.872);
+        }
+        &:nth-child(18) {
+            background-color: rgb(121, 193, 157);
+            transform: scale(0.864, 0.864);
+        }
+        &:nth-child(19) {
+            background-color: rgb(125, 194, 153);
+            transform: scale(0.856, 0.856);
+        }
+        &:nth-child(20) {
+            background-color: rgb(127, 194, 151);
+            transform: scale(0.848, 0.848);
+        }
+        &:nth-child(21) {
+            background-color: rgb(129, 194, 148);
+            transform: scale(0.84, 0.84);
+        }
+        &:nth-child(22) {
+            background-color: rgb(131, 195, 145);
+            transform: scale(0.832, 0.832);
+        }
+        &:nth-child(23) {
+            background-color: rgb(135, 196, 141);
+            transform: scale(0.824, 0.824);
+        }
+        &:nth-child(24) {
+            background-color: rgb(136, 196, 139);
+            transform: scale(0.816, 0.816);
+        }
+        &:nth-child(25) {
+            background-color: rgb(137, 196, 138);
+            transform: scale(0.808, 0.808);
+        }
+        &:nth-child(26) {
+            background-color: rgb(138, 196, 137);
+            transform: scale(0.8, 0.8);
+        }
+        &:nth-child(27) {
+            background-color: rgb(140, 197, 136);
+            transform: scale(0.792, 0.792);
+        }
+        &:nth-child(28) {
+            background-color: rgb(143, 198, 131);
+            transform: scale(0.784, 0.784);
+        }
+        &:nth-child(29) {
+            background-color: rgb(144, 198, 130);
+            transform: scale(0.776, 0.776);
+        }
+        &:nth-child(30) {
+            background-color: rgb(153, 199, 120);
+            transform: scale(0.768, 0.768);
+        }
+        &:nth-child(31) {
+            background-color: rgb(154, 200, 119);
+            transform: scale(0.76, 0.76);
+        }
+        &:nth-child(32) {
+            background-color: rgb(155, 200, 118);
+            transform: scale(0.752, 0.752);
+        }
+        &:nth-child(33) {
+            background-color: rgb(156, 200, 116);
+            transform: scale(0.744, 0.744);
+        }
+        &:nth-child(34) {
+            background-color: rgb(158, 201, 114);
+            transform: scale(0.736, 0.736);
+        }
+        &:nth-child(35) {
+            background-color: rgb(160, 201, 111);
+            transform: scale(0.728, 0.728);
+        }
+        &:nth-child(36) {
+            background-color: rgb(164, 202, 107);
+            transform: scale(0.72, 0.72);
+        }
+        &:nth-child(37) {
+            background-color: rgb(173, 204, 96);
+            transform: scale(0.712, 0.712);
+        }
+        &:nth-child(38) {
+            background-color: rgb(174, 204, 95);
+            transform: scale(0.704, 0.704);
+        }
+        &:nth-child(39) {
+            background-color: rgb(197, 209, 68);
+            transform: scale(0.696, 0.696);
+        }
+        &:nth-child(40) {
+            background-color: rgb(198, 209, 66);
+            transform: scale(0.688, 0.688);
+        }
+        &:nth-child(41) {
+            background-color: rgb(211, 212, 52);
+            transform: scale(0.68, 0.68);
+        }
+        &:nth-child(42) {
+            background-color: rgb(214, 212, 48);
+            transform: scale(0.672, 0.672);
+        }
+        &:nth-child(43) {
+            background-color: rgb(218, 213, 43);
+            transform: scale(0.664, 0.664);
+        }
+        &:nth-child(44) {
+            background-color: rgb(231, 216, 29);
+            transform: scale(0.656, 0.656);
+        }
+        &:nth-child(45) {
+            background-color: rgb(240, 218, 18);
+            transform: scale(0.648, 0.648);
+        }
+        &:nth-child(46) {
+            background-color: rgb(243, 218, 14);
+            transform: scale(0.64, 0.64);
+        }
+        &:nth-child(47) {
+            background-color: rgb(246, 219, 11);
+            transform: scale(0.632, 0.632);
+        }
+        &:nth-child(48) {
+            background-color: rgb(247, 219, 9);
+            transform: scale(0.624, 0.624);
+        }
+        &:nth-child(49) {
+            background-color: rgb(250, 220, 6);
+            transform: scale(0.616, 0.616);
+        }
+        &:nth-child(50) {
+            background-color: rgb(255, 221, 0);
+            transform: scale(0.608, 0.608);
+        }
+    }
+}

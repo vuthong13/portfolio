@@ -1,0 +1,48 @@
+@mixin pc {
+    @media (min-width: 769px) { @content; }
+}
+@mixin pc-only {
+    @media (min-width: 992px) { @content; }
+}
+@mixin tab {
+    @media (max-width: 991px) { @content; }
+}
+@mixin sp {
+    @media (max-width: 768px) { @content; }
+}
+@mixin sp-sm {
+    @media (max-width: 480px) { @content; }
+}
+
+$font-01: "Zen Kaku Gothic New", sans-serif;
+$color-main: #69C9BA;
+$color-txt: #141414;
+$color-dark: #646569;
+
+.pc {
+    display: block;
+    @include sp {
+        display: none;
+    }
+}
+
+.sp {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+
+.pc-only {
+    display: block;
+    @include tab {
+        display: none;
+    }
+}
+
+.tab {
+    display: none;
+    @include tab {
+        display: block;
+    }
+}

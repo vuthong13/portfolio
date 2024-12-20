@@ -1,0 +1,219 @@
+@import 'foundation/_setting';
+
+@keyframes rotate-in-01 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: translate(0, 7px) rotate(388deg);
+    }
+}
+
+@keyframes rotate-out-01 {
+    0% {
+        transform: translate(0, 7px) rotate(388deg);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    75% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate-in-02 {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: translate(0, -7px) rotate(-388deg);
+    }
+}
+
+@keyframes rotate-out-02 {
+    0% {
+        transform: translate(0, -7px) rotate(-388deg);
+    }
+    50% {
+        transform: rotate(-360deg);
+    }
+    75% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.header {
+    padding: 12px 0;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    @include sp {
+        padding: 8px 0;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-logo {
+        img {
+            height: 66px;
+            @include sp {
+                height: 49px;
+            }
+        }
+    }
+    &-menu {
+        display: flex;
+        margin-right: -16px;
+        @include sp {
+            display: none;
+        }
+        li {
+            margin: 0 18px;
+            a {
+                font-family: $font-01;
+                font-weight: 400;
+                font-size: 20px;
+                &:hover {
+                    color: $color-main;
+                }
+            }
+        }
+    }
+    &-btn {
+        border: 0;
+        display: none;
+        @include sp {
+            display: block;
+        }
+        span {
+            display: block;
+            width: 30px;
+            height: 1px;
+            background-color: $color-dark;
+            transition: all 0.3s;
+            & + span {
+                margin-top: 6px;
+            }
+            &:first-child {
+                animation: rotate-out-01 .3s linear forwards;
+            }
+            &:last-child {
+                animation: rotate-out-02 .3s linear forwards;
+            }
+        }
+    }
+}
+
+.menu-sp {
+    visibility: hidden;
+    display: none;
+    @include sp {
+        visibility: visible;
+        position: fixed;
+        z-index: 999;
+        top: 65px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-main;
+        padding: 42px 88px 25px;
+        text-align: center;
+    }
+    .url-list {
+        margin-bottom: 52px;
+        li {
+            &:not(:last-child) {
+                margin-bottom: 26px;
+            }
+            a {
+                font-family: $font-01;
+                font-size: 30px;
+                span {
+                    font-weight: 500;
+                    display: block;
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+    .banner-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+        li {
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 75px;
+                border: 1px solid #e0e0e0;
+                background-color: #fff;
+                padding: 0 50px;
+                margin: auto;
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    .social-list {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        li {
+            a {
+                img {
+                    height: 24px;
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.menu-open {
+        overflow: hidden;
+        .header {
+            &-btn {
+                span {
+                    transform-origin: 50% 50%;
+                    &:first-child {
+                        animation: rotate-in-01 .3s linear forwards;
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:last-child {
+                        animation: rotate-in-02 .3s linear forwards;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+@keyframes back-to-top {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.footer-top {
+    padding: 100px 0;
+    @include tab {
+        padding: 50px 0 60px;
+    }
+    .footer__url {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+            flex-direction: column;
+            gap: 22px;
+        }
+        li {
+            width: calc(50% - 30px);
+            @include sp {
+                width: 100%;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 173px;
+                border: 1px solid #d0d0d0;
+                @include sp {
+                    height: 58px;
+                    padding: 35px 0;
+                }
+                &:hover {
+                    opacity: 0.7;
+                }
+                img {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.back-to-top {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $color-dark;
+    position: absolute;
+    right: 190px;
+    top: -84px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: all 0.3s;
+    @include tab {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        top: -50px;
+        padding: 7px 10px 0;
+
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.sticky {
+        position: fixed;
+        bottom: 24px;
+        top: auto;
+        z-index: 99;
+        @include sp {
+            bottom: 10px;
+        }
+    }
+    &:hover {
+        animation: back-to-top .3s linear forwards;
+    }
+}
+
+.footer {
+    background-color: $color-dark;
+    font-family: $font-01;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    @include sp {
+        font-size: 12px;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+        @include sp {
+            height: 80px;
+        }
+    }
+    &-ico {
+        display: flex;
+        gap: 45px;
+        @include sp {
+            gap: 30px;
+        }
+        li {
+            a {
+                img {
+                    height: 30px;
+                    @include sp {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
